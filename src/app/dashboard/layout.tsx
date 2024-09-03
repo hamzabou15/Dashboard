@@ -1,6 +1,6 @@
+import { MenuD } from "@/components";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +15,15 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <div className={inter.className}>dashb{children}</div>
-    </html>
+    <div className="h-screen flex " >
+      {/* left section */}
+      <div className="w-[14%] max-lg:w-[8%] lg:w-[16%] " >
+          <MenuD/>
+      </div>
+      {/* right section */}
+      <div className="w-[86%] max-md:w-[92%] lg:w-[84%] bg-[#f7F8Fa]">
+
+      </div>
+    </div>
   );
 }
