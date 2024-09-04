@@ -1,4 +1,4 @@
-import { MenuD } from "@/components";
+import { MenuD, MenuT } from "@/components";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -15,14 +15,14 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="h-screen flex " >
+    <div className="h-screen flex gap-3" >
       {/* left section */}
-      <div className="w-[14%] max-lg:w-[8%] lg:w-[16%] " >
+      <div className="w-[14%] max-lg:w-[8%] lg:w-[16%] max-md:w-[50px] bg-white " >
           <MenuD/>
       </div>
       {/* right section */}
-      <div className="w-[86%] max-md:w-[92%] lg:w-[84%] bg-[#f7F8Fa]">
-
+      <div className="w-[calc(86%-24px)] max-md:w-[calc(92%-24px)] lg:w-[calc(84%-24px)] mt-3   ">
+          <MenuT/>
       </div>
     </div>
   );

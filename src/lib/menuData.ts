@@ -1,15 +1,14 @@
 import { IoImage, IoImageOutline, IoLogOut, IoLogOutOutline, IoMegaphone, IoMegaphoneOutline } from "react-icons/io5";
-import { ReactElement } from 'react';
-import { PiExam, PiExamLight, PiFilesFill, PiFilesLight, PiStudentDuotone, PiStudentFill, PiUsersThree, PiUsersThreeFill } from "react-icons/pi";
-import { RiParentFill, RiParentLine } from "react-icons/ri";
-import { BsCalendar2Check, BsCalendar2CheckFill, BsFileEarmarkText, BsFileEarmarkTextFill, BsPersonCheck, BsPersonCheckFill } from "react-icons/bs";
+import { PiExam, PiExamFill, PiFilesFill, PiFilesLight, PiStudentDuotone, PiStudentFill, PiUsersThree, PiUsersThreeFill } from "react-icons/pi";
+import { RiBookFill, RiBookLine, RiParentFill, RiParentLine } from "react-icons/ri";
+import { BsCalendar2Check, BsCalendar2CheckFill, BsFileEarmarkText, BsFileEarmarkTextFill, BsPersonCheck, BsPersonCheckFill, BsPersonFillCheck } from "react-icons/bs";
 import { LuSchool2 } from "react-icons/lu";
-import { FaSchool } from "react-icons/fa";
-import { MdAssignmentReturned, MdOutlineAssignmentReturned, MdOutlinePlayLesson, MdPlayLesson } from "react-icons/md";
+import { MdAssignmentReturned, MdOutlineAssignmentReturned  } from "react-icons/md";
 import { AiFillMessage, AiOutlineMessage } from "react-icons/ai";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { HiMiniUserCircle } from "react-icons/hi2";
 import { TbSettings, TbSettingsFilled } from "react-icons/tb";
+import { FaSchool } from "react-icons/fa6";
 
 type MenuItem = {
   icon: string;
@@ -75,8 +74,8 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
       {
         icon: "/lesson.png",
         label: "Lessons",
-        iconOutlined: MdOutlinePlayLesson,
-        iconSolid: MdPlayLesson,
+        iconOutlined: RiBookLine,
+        iconSolid: RiBookFill,
         href: "/list/lessons",
         visible: ["admin", "teacher"],
       },
@@ -100,7 +99,7 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
         icon: "/result.png",
         label: "Results",
         iconOutlined: PiExam,
-        iconSolid: PiExamLight,
+        iconSolid: PiExamFill,
         href: "/list/results",
         visible: ["admin", "teacher", "student", "parent"],
       },
@@ -108,7 +107,7 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
         icon: "/attendance.png",
         label: "Attendance",
         iconOutlined: BsPersonCheck,
-        iconSolid: BsPersonCheckFill,
+        iconSolid: BsPersonFillCheck,
         href: "/list/attendance",
         visible: ["admin", "teacher", "student", "parent"],
       },

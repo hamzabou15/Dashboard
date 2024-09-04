@@ -6,6 +6,8 @@
 
 body {
     font-family: "Montserrat", sans-serif!important;
+    color: #202124cf;
+    background-color: #f7F8Fa;
 }
 
 /* width */
@@ -28,4 +30,15 @@ body {
   /* Handle on hover */
   .menuScroll::-webkit-scrollbar-thumb:hover {
     background: #CED4DA; 
+  }
+
+  input {
+    border : none!important
+  }
+  input:focus {
+    outline: none!important;
+  }
+  input::placeholder {
+    font-size: small;
+    font-weight: 400;
   }
