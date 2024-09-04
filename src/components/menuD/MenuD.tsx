@@ -36,7 +36,7 @@ export const MenuD = () => {
               const index = sectionIndex * 100 + itemIndex; // Create a unique index for each item
               return (
                 <Link
-                  href={"/dashboard/student"}
+                  href={item.label}
                   key={item.label}
                   className={`flex items-center justify-center text-[#202124cf] lg:justify-start  rounded-tl-none
                                rounded-tr-full rounded-br-full rounded-bl-none gap-3  pl-8 pr-5 py-2 hover:bg-[#20212414] ${selectedMenu === item.label ? 'bg-[#dfd3fd] text-[#311e63] font-semibold' : ''} `}

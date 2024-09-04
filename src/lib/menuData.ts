@@ -1,14 +1,14 @@
 import { IoImage, IoImageOutline, IoLogOut, IoLogOutOutline, IoMegaphone, IoMegaphoneOutline } from "react-icons/io5";
-import { PiExam, PiExamFill, PiFilesFill, PiFilesLight, PiStudentDuotone, PiStudentFill, PiUsersThree, PiUsersThreeFill } from "react-icons/pi";
-import { RiBookFill, RiBookLine, RiParentFill, RiParentLine } from "react-icons/ri";
-import { BsCalendar2Check, BsCalendar2CheckFill, BsFileEarmarkText, BsFileEarmarkTextFill, BsPersonCheck, BsPersonCheckFill, BsPersonFillCheck } from "react-icons/bs";
-import { LuSchool2 } from "react-icons/lu";
-import { MdAssignmentReturned, MdOutlineAssignmentReturned  } from "react-icons/md";
+import { PiExam, PiExamFill, PiStudentDuotone, PiStudentFill, PiUsersThree, PiUsersThreeFill } from "react-icons/pi";
+import {  BsPersonCheck,  BsPersonFillCheck } from "react-icons/bs";
 import { AiFillMessage, AiOutlineMessage } from "react-icons/ai";
-import { HiOutlineUserCircle } from "react-icons/hi";
 import { HiMiniUserCircle } from "react-icons/hi2";
-import { TbSettings, TbSettingsFilled } from "react-icons/tb";
-import { FaSchool } from "react-icons/fa6";
+import {  TbSettingsFilled } from "react-icons/tb";
+import { HiOutlineUsers } from "react-icons/hi2";
+import { HiUsers } from "react-icons/hi2";
+import { PiBookBookmarkFill , PiCalendarCheckFill  , PiArrowSquareUpRightFill , PiUserCircle   ,PiCalendarCheck , PiBuildingOfficeFill , PiBuildingOffice ,PiArrowSquareUpRight  , PiFileTextFill , PiFiles , PiFilesFill , PiBookBookmark ,PiFileText   } from "react-icons/pi";
+import { IoSettingsOutline } from "react-icons/io5";
+
 
 type MenuItem = {
   icon: string;
@@ -33,7 +33,7 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
       },
       {
         icon: "/teacher.png",
-        label: "Teachers",
+        label: "teachers",
         iconOutlined: PiStudentDuotone,
         iconSolid: PiStudentFill,
         href: "/list/teachers",
@@ -41,7 +41,7 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
       },
       {
         icon: "/student.png",
-        label: "Students",
+        label: "students",
         iconOutlined: PiUsersThree,
         iconSolid: PiUsersThreeFill,
         href: "/list/students",
@@ -50,39 +50,39 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
       {
         icon: "/parent.png",
         label: "Parents",
-        iconOutlined: RiParentLine,
-        iconSolid: RiParentFill,
+        iconOutlined: HiOutlineUsers,
+        iconSolid: HiUsers,
         href: "/list/parents",
         visible: ["admin", "teacher"],
       },
       {
         icon: "/subject.png",
         label: "Subjects",
-        iconOutlined: BsFileEarmarkText,
-        iconSolid: BsFileEarmarkTextFill,
+        iconOutlined: PiFileText,
+        iconSolid: PiFileTextFill,
         href: "/list/subjects",
         visible: ["admin"],
       },
       {
         icon: "/class.png",
         label: "Classes",
-        iconOutlined: LuSchool2,
-        iconSolid: FaSchool,
+        iconOutlined: PiBuildingOffice,
+        iconSolid: PiBuildingOfficeFill,
         href: "/list/classes",
         visible: ["admin", "teacher"],
       },
       {
         icon: "/lesson.png",
         label: "Lessons",
-        iconOutlined: RiBookLine,
-        iconSolid: RiBookFill,
+        iconOutlined: PiBookBookmark,
+        iconSolid: PiBookBookmarkFill,
         href: "/list/lessons",
         visible: ["admin", "teacher"],
       },
       {
         icon: "/exam.png",
         label: "Exams",
-        iconOutlined: PiFilesLight,
+        iconOutlined: PiFiles,
         iconSolid: PiFilesFill,
         href: "/list/exams",
         visible: ["admin", "teacher", "student", "parent"],
@@ -90,8 +90,8 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
       {
         icon: "/assignment.png",
         label: "Assignments",
-        iconOutlined: MdOutlineAssignmentReturned,
-        iconSolid: MdAssignmentReturned,
+        iconOutlined: PiArrowSquareUpRight,
+        iconSolid: PiArrowSquareUpRightFill,
         href: "/list/assignments",
         visible: ["admin", "teacher", "student", "parent"],
       },
@@ -114,8 +114,8 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
       {
         icon: "/calendar.png",
         label: "Events",
-        iconOutlined: BsCalendar2Check,
-        iconSolid: BsCalendar2CheckFill,
+        iconOutlined: PiCalendarCheck,
+        iconSolid: PiCalendarCheckFill ,
         href: "/list/events",
         visible: ["admin", "teacher", "student", "parent"],
       },
@@ -143,7 +143,7 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
       {
         icon: "/profile.png",
         label: "Profile",
-        iconOutlined: HiOutlineUserCircle,
+        iconOutlined: PiUserCircle,
         iconSolid: HiMiniUserCircle,
         href: "/profile",
         visible: ["admin", "teacher", "student", "parent"],
@@ -151,7 +151,7 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
       {
         icon: "/setting.png",
         label: "Settings",
-        iconOutlined: TbSettings,
+        iconOutlined: IoSettingsOutline,
         iconSolid: TbSettingsFilled,
         href: "/settings",
         visible: ["admin", "teacher", "student", "parent"],

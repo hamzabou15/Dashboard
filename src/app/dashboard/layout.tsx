@@ -21,8 +21,11 @@ export default function DashboardLayout({
           <MenuD/>
       </div>
       {/* right section */}
-      <div className="w-[calc(86%-24px)] max-md:w-[calc(92%-24px)] lg:w-[calc(84%-24px)] mt-3   ">
-          <MenuT/>
+      <div className="w-[calc(86%-24px)] max-md:w-[calc(92%-24px)] lg:w-[calc(84%-24px)] mt-3 flex flex-col gap-3">
+         <MenuT/>
+         <div className = "h-[calc(100%-98px)] w-full ">
+             {children}
+         </div>
       </div>
     </div>
   );

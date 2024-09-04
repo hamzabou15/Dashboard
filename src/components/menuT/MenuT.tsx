@@ -14,12 +14,22 @@ export const MenuT = () => {
                 </div>
             </div>
             <div className=''>
-                <div className="flex items-center gap-3 text-lg">
-                    <AiOutlineMessage/>
-                    <IoMegaphoneOutline/>
-                    <div className="flex flex-col items-end">
+                <div className="flex items-center gap-7 text-lg">
+                    <div className="cursor-pointer">
+                    <AiOutlineMessage />
+                    </div>
+                    <div className="relative cursor-pointer">
+                        <IoMegaphoneOutline />
+                        <div className="absolute w-5 h-5 rounded-full bg-[#311e63] flex items-center justify-center top-[-16px] right-[-16px]">
+                            <span className="text-white text-[8px]"> 3</span>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-end ">
                         <span className="font-semibold text-xs">Jone DEDE</span>
                         <span className="text-xs">admin</span>
+                    </div>
+                    <div className="w-8 h-8 bg-[#d4862c] rounded-full flex items-center justify-center cursor-pointer">
+                        <span className="text-xl font-semibold text-white" >H</span>
                     </div>
                 </div>
             </div>
