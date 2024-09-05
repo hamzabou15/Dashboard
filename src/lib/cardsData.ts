@@ -14,28 +14,28 @@ export const cardsData: { items: tyepData[] }[] = [
             type: 'students',
             date: "20/02/2020",
             numberOf: 2.2679,
-            bgColor:"rgb(161 142 213)",
+            bgColor:"#cdb4db",
         },
         {
             id: 1,
             type: 'Teachers',
             date: "20/02/2020",
             numberOf: 3.8256,
-            bgColor:"rgb(97 247 155)",
+            bgColor:"#fb8b24",
         },
         {
             id: 2,
             type: 'Parents',
             date: "20/02/2020",
             numberOf: 3.2780,
-            bgColor:"rgb(161 142 213)",
+            bgColor:"#8ecae6",
         },
         {
             id: 3,
             type: 'Staffs',
             date: "20/02/2020",
             numberOf: 7.3780 ,
-            bgColor:"rgb(97 247 155)",
+            bgColor:"#f4acb7",
         }
     
     ]}

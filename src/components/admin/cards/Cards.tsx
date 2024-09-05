@@ -4,7 +4,7 @@ import { cardsData } from '@/lib/cardsData'
 
 export const Cards = () => {
   return (
-    <div className='flex gap-2' >
+    <div className='flex gap-2  ' >
       {
         cardsData.map(card => (
           card.items.map(items => (

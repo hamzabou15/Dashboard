@@ -1,37 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
 body {
-    font-family: "Montserrat", sans-serif!important;
+  font-family: "Open Sans", sans-serif!important;
     color: #202124cf;
-    background-color: #f7F8Fa;
+    background-color: #330c4f;
 }
 
 /* width */
 .menuScroll::-webkit-scrollbar {
-    width: 8px;
+    display: none;
   }
-  
-  /* Track */
-  .menuScroll::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #E9ECEF; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  .menuScroll::-webkit-scrollbar-thumb {
-    background: #DEE2E6; 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  .menuScroll::-webkit-scrollbar-thumb:hover {
-    background: #CED4DA; 
-  }
-
   input {
     border : none!important
   }
@@ -39,6 +21,7 @@ body {
     outline: none!important;
   }
   input::placeholder {
-    font-size: small;
-    font-weight: 400;
+    font-family: "Open Sans", sans-serif!important;
+    font-size: small!important;
+    font-weight: 100!important;
   }

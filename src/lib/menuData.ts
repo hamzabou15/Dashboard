@@ -19,9 +19,9 @@ type MenuItem = {
   visible: string[];
 };
 
-export const menuItems: { title: string; items: MenuItem[] }[] = [
+export const menuItems: { items: MenuItem[] }[] = [
   {
-    title: "MENU",
+  
     items: [
       {
         icon: "/home.png",
@@ -138,7 +138,6 @@ export const menuItems: { title: string; items: MenuItem[] }[] = [
     ],
   },
   {
-    title: "OTHER",
     items: [
       {
         icon: "/profile.png",

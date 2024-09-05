@@ -6,17 +6,22 @@ import { IoMegaphoneOutline } from "react-icons/io5";
 
 export const MenuT = () => {
     return (
-        <div className=' flex items-center justify-between p-4 bg-white rounded-lg'>
+        <div className=' flex items-center justify-between p-4  rounded-lg'>
+            <div className='text-[#330c4f]'>
+                <h1 className='text-xl font-semibold'>
+                    Dashboard
+                </h1>
+            </div>
             <div className=''>
-                <div className='flex items-center gap-3 border border-[#20212414] border-w-[3px] rounded-full p-2 '>
+                <div className='flex items-center gap-3 border border-[#20212414] border-w-[3px] rounded-full p-1 px-2 '>
                     <CiSearch />
-                    <input type="text" placeholder="Search" className="border-none bg-transparent " />
+                    <input type="text" placeholder="Search..." className="border-none bg-transparent " />
                 </div>
             </div>
             <div className=''>
                 <div className="flex items-center gap-7 text-lg">
                     <div className="cursor-pointer">
-                    <AiOutlineMessage />
+                        <AiOutlineMessage />
                     </div>
                     <div className="relative cursor-pointer">
                         <IoMegaphoneOutline />

@@ -15,13 +15,13 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="h-screen flex gap-3" >
+    <div className="h-screen flex " >
       {/* left section */}
-      <div className="w-[14%] max-lg:w-[8%] lg:w-[16%] max-md:w-[50px] bg-white " >
+      <div className="w-[14%] max-lg:w-[8%] lg:w-[16%] max-md:w-[50px]  " >
           <MenuD/>
       </div>
       {/* right section */}
-      <div className="w-[calc(86%-24px)] max-md:w-[calc(92%-24px)] lg:w-[calc(84%-24px)] mt-3 flex flex-col gap-3">
+      <div className="w-[calc(86%)] max-md:w-[calc(92%)] lg:w-[calc(84%)] p-3  flex flex-col gap-3 bg-white rounded-tl-[40px] overflow-hidden ">
          <MenuT/>
          <div className = "h-[calc(100%-98px)] w-full ">
              {children}
