@@ -1,49 +1,24 @@
+"use client"
+import Image from 'next/image';
 import React from 'react';
 import { MdMoreHoriz } from 'react-icons/md';
 import { Legend, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts';
 
 const data = [
     {
-        name: "18-24",
-        uv: 31.47,
-        pv: 2400,
-        fill: "#8884d8",
+        name: "Total",
+        count: 1200,
+        fill: "white",
     },
     {
-        name: "25-29",
-        uv: 26.69,
-        pv: 4567,
-        fill: "#83a6ed",
+        name: "Girls",
+        count: 570,
+        fill: "#fb8b24",
     },
     {
-        name: "30-34",
-        uv: 15.69,
-        pv: 1398,
-        fill: "#8dd1e1",
-    },
-    {
-        name: "35-39",
-        uv: 8.22,
-        pv: 9800,
-        fill: "#82ca9d",
-    },
-    {
-        name: "40-49",
-        uv: 8.63,
-        pv: 3908,
-        fill: "#a4de6c",
-    },
-    {
-        name: "50+",
-        uv: 2.63,
-        pv: 4800,
-        fill: "#d0ed57",
-    },
-    {
-        name: "unknow",
-        uv: 6.67,
-        pv: 4800,
-        fill: "#ffc658",
+        name: "Boys",
+        count: 630,
+        fill: "#8ecae6",
     },
 ];
 const style = {
@@ -51,41 +26,53 @@ const style = {
     left: 350,
     lineHeight: "24px",
 };
-export  const StudentStats = () => {
+
+const countTotal = data[0].count;
+
+export const StudentStats = () => {
 
 
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col '>
             <div className='flex items-center justify-between'>
                 <h2 className='text-[#311e63] text-base font-semibold'>Students</h2>
                 <div className='text-[#a7a7a7] text-2xl cursor-pointer'>
                     <MdMoreHoriz />
                 </div>
             </div>
-            {/* <RadialBarChart
-                width={500}
-                height={300}
-                cx={150}
-                cy={150}
-                innerRadius={20}
-                outerRadius={140}
-                barSize={10}
-                data={data}
-            >
-                <RadialBar
-                    label={{ position: "insideStart", fill: "#fff" }}
-                    background
-                    dataKey="uv"
+            <div className="relative w-full h-[250px] ">
+                <ResponsiveContainer>
+                    <RadialBarChart
+                        cx="50%"
+                        cy="50%"
+                        innerRadius="40%"
+                        outerRadius="100%"
+                        barSize={32}
+                        data={data}
+                    >
+                        <RadialBar background dataKey="count" />
+                    </RadialBarChart>
+                </ResponsiveContainer>
+                <Image
+                    src="/maleFemale.png"
+                    alt=""
+                    width={50}
+                    height={50}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 />
-                <Legend
-                    iconSize={10}
-                    width={120}
-                    height={140}
-                    layout="vertical"
-                    verticalAlign="middle"
-                    wrapperStyle={style}
-                />
-            </RadialBarChart> */}
+            </div>
+            <div className="flex justify-center gap-16">
+                {
+                    data.map((item, index) => (
+                        index !== 0 &&
+                        <div className="flex flex-col gap-1" key={index}>
+                            <h1 className={`font-bold text-[#311e63] ${item.name === "Girls" ?'text-[#fb8b24]' : 'text-[#8ecae6]'} `}>{item.count}</h1>
+                            <h2 className="text-xs text-gray-600">{item.name} ({(item.count/countTotal)*100}%)</h2>
+                        </div>
+                    ))
+                }
+
+            </div>
         </div>
     );
 };
