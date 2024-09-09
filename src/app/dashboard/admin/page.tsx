@@ -1,4 +1,4 @@
-import { Attendance, Cards, FinanceStats, StudentStats } from '@/components'
+import { Attendance, Cards, EventsCalendar, FinanceStats, StudentStats } from '@/components'
 import React from 'react'
 
 const AdminPage = () => {
@@ -19,6 +19,7 @@ const AdminPage = () => {
         </div>
       </div>
       <div className="w-[35%] h-ful">
+      <EventsCalendar/>
       </div>
     </div>
   )
