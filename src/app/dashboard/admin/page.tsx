@@ -18,8 +18,10 @@ const AdminPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-[35%] h-ful">
-      <EventsCalendar/>
+      <div className="w-[35%] h-ful ">
+        <div className='bg-white shadow-sm  border rounded-2xl overflow-hidden '>
+          <EventsCalendar />
+        </div>
       </div>
     </div>
   )
