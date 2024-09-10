@@ -1,4 +1,5 @@
 "use client"
+import useWindowWidth from '@/functions/widthSize'
 import { menuItems } from '@/lib'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,11 +11,16 @@ export const MenuD = () => {
     setSelectedMenu(index);
   };
 
+  const windowWidth = useWindowWidth();
   return (
     <div className='flex flex-col h-full p-[8px 0px 8px 8px] pl-2 gap-4'>
-      <Link href="" className='flex items-center justify-center md:justify-start gap-2 p-3'>
-        <Image src="/logo.png" alt="logo" width={32} height={32} />
-        <span className='hidden lg:block'>School Dev</span>
+      <Link href="" className='flex items-center justify-center  gap-2 p-3 '>
+      <Image
+            src={windowWidth > 1024 ? '/logo.svg' : '/logoRespo.svg'}
+            alt="logo"
+            width={92}
+            height={42}
+        />
       </Link>
       <div className='flex flex-col  overflow-y-auto overflow-x-hidden  max-h-[85%] menuScroll'>
         {menuItems.map((i, sectionIndex) => (

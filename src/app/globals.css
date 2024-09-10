@@ -80,9 +80,27 @@ abbr:where([title]) {
   border-radius: 6px !important;
 }
 
-.react-calendar__tile:enabled:hover , .react-calendar__navigation button {
+.react-calendar__tile:enabled:hover,
+.react-calendar__navigation button {
   /* background: #c8c8c831 !important; */
   border-radius: 6px !important;
   /* color: #00000000!important; */
 
+}
+.recharts-legend-item-text {
+  font-size: 14px!important;
+}
+.recharts-surface {
+  /* width : 14px!important; */
+}
+@media screen and (max-width: 768px) {
+  .recharts-legend-item-text {
+    font-size: 12px!important;
+  }
+  .recharts-surface {
+    width : 10px;
+  }
+  .recharts-legend-wrapper {
+    padding: 10px 0px 20px 0px;
+  }
 }

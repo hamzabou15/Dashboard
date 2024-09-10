@@ -70,9 +70,9 @@ export const Attendance = () => {
                             dataKey="Present"
                             fill="#fb8b24"
                             legendType="circle"
-                            radius={[10, 10, 0, 0]}
-                            fontSize={windowWidth < 760 ? "10" : "20"  }
-                        />
+                            radius={[10, 10, 0, 0]}   
+                            
+                            />
                         <Bar
                             dataKey="Absent"
                             fill="#8ecae6"

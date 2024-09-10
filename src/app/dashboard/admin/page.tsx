@@ -1,4 +1,4 @@
-import { Attendance, Cards, Events, EventsCalendar, FinanceStats, StudentStats } from '@/components'
+import { Announcements, Attendance, Cards, Events, EventsCalendar, FinanceStats, StudentStats } from '@/components'
 import React from 'react'
 
 const AdminPage = () => {
@@ -38,7 +38,9 @@ const AdminPage = () => {
         </div>
         <div className='bg-white shadow-sm  border rounded-2xl overflow-hidden '>
           <Events />
-
+        </div>
+        <div className='bg-white shadow-sm  border rounded-2xl overflow-hidden '>
+          <Announcements/>
         </div>
       </div>
     </div>
