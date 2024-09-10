@@ -27,7 +27,8 @@ export const MenuD = () => {
                   key={item.label}
                   className={` relative flex items-center justify-center  font-light  lg:justify-start  rounded-tl-full 
                                rounded-tr-nonne rounded-br-nonne rounded-bl-full gap-5 h-10 pl-8 pr-5   hover:bg-[#fbf6f131]
-                               ${selectedMenu === item.label ? ' text-[#ffa03b] sticky top-0 z-30  bg-white hover:bg-[#fbf6f1] ' : 'text-white bg-transparent '} 
+                               ${selectedMenu === item.label ? ' text-[#ffa03b] sticky top-0 z-30  bg-white hover:bg-[#fbf6f1] ' : 'text-white bg-transparent '}
+                               max-lg:pl-5
                                `}
 
                   onClick={() => handleMenuClick(item.label)}

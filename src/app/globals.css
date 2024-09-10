@@ -70,7 +70,7 @@ abbr:where([title]) {
 }
 
 .react-calendar__tile--now {
-  background: #330c4f9c !important;
+  background: #330c4f46 !important;
   color: white !important;
   border-radius: 6px !important;
 }

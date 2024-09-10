@@ -21,12 +21,12 @@ const data = [
     {
       name: "Mar",
       income: 2000,
-      expense: 9800,
+      expense: 12800,
     },
     {
       name: "Apr",
       income: 2780,
-      expense: 3908,
+      expense: 9908,
     },
     {
       name: "May",
@@ -40,7 +40,7 @@ const data = [
     },
     {
       name: "Jul",
-      income: 3490,
+      income: 5490,
       expense: 4300,
     },
     {
@@ -50,8 +50,8 @@ const data = [
     },
     {
       name: "Sep",
-      income: 3490,
-      expense: 4300,
+      income: 8490,
+      expense: 2300,
     },
     {
       name: "Oct",
@@ -60,12 +60,12 @@ const data = [
     },
     {
       name: "Nov",
-      income: 3490,
-      expense: 4300,
+      income: 2490,
+      expense: 6300,
     },
     {
       name: "Dec",
-      income: 3490,
+      income: 7490,
       expense: 4300,
     },
   ];
@@ -81,13 +81,13 @@ const data = [
     <div className="relative w-full h-[350px] ">
     <ResponsiveContainer width="100%" height="90%">
         <LineChart
-          width={500}
+          width={700}
           height={300}
           data={data}
           margin={{
             top: 5,
-            right: 30,
-            left: 20,
+            right: 5,
+            left: 5,
             bottom: 5,
           }}
         >
@@ -98,8 +98,9 @@ const data = [
             tick={{ fill: "#4b5563" }}
             tickLine={false}
             tickMargin={10}
+            
           />
-          <YAxis axisLine={false} tick={{ fill: "#4b5563" }} tickLine={false}  tickMargin={20}/>
+          {/* <YAxis axisLine={false} tick={{ fill: "#4b5563" }}  fontSize={14} tickLine={false}  tickMargin={20}/> */}
           <Tooltip />
           <Legend
             align="center"

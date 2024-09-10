@@ -1,35 +1,42 @@
 "use client"
-import React from 'react'
+import useWindowWidth from '@/functions/widthSize';
+import React, { useEffect, useState } from 'react'
 import { MdMoreHoriz } from 'react-icons/md'
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 const data = [
     {
         name: "Mon",
-        present: 60,
-        absent: 40,
+        Present: 60,
+        Absent: 40,
     },
     {
         name: "Tue",
-        present: 70,
-        absent: 60,
+        Present: 70,
+        Absent: 60,
     },
     {
         name: "Wed",
-        present: 90,
-        absent: 75,
+        Present: 90,
+        Absent: 75,
     },
     {
         name: "Thu",
-        present: 90,
-        absent: 75,
+        Present: 90,
+        Absent: 75,
     },
     {
         name: "Fri",
-        present: 65,
-        absent: 55,
+        Present: 65,
+        Absent: 55,
     },
 ];
 export const Attendance = () => {
+
+
+    const windowWidth = useWindowWidth();
+
+    console.log(windowWidth , "windowWidth")
+
     return (
         <div className='flex flex-col h-full justify-between '>
             <div className='flex items-center justify-between'>
@@ -38,9 +45,11 @@ export const Attendance = () => {
                     <MdMoreHoriz />
                 </div>
             </div>
-            <div className="relative w-full h-[100%] ">
+            <div className="relative w-full h-[100%]
+                max-xl:h-[250px]
+            ">
                 <ResponsiveContainer width="100%" height="90%">
-                    <BarChart width={500} height={300} data={data} barSize={20}>
+                    <BarChart width={500} height={300} data={data} barSize={windowWidth >= 1280 ? 20 : 15}>
                         <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#ddd" />
                         <XAxis
                             dataKey="name"
@@ -58,13 +67,14 @@ export const Attendance = () => {
                             wrapperStyle={{ paddingTop: "20px", paddingBottom: "40px" }}
                         />
                         <Bar
-                            dataKey="present"
+                            dataKey="Present"
                             fill="#fb8b24"
                             legendType="circle"
                             radius={[10, 10, 0, 0]}
+                            fontSize={windowWidth < 760 ? "10" : "20"  }
                         />
                         <Bar
-                            dataKey="absent"
+                            dataKey="Absent"
                             fill="#8ecae6"
                             legendType="circle"
                             radius={[10, 10, 0, 0]}

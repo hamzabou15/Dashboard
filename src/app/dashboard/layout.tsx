@@ -21,7 +21,7 @@ export default function DashboardLayout({
           <MenuD/>
       </div>
       {/* right section */}
-      <div className="w-[calc(86%)] max-md:w-[calc(92%)] lg:w-[calc(84%)] p-3  flex flex-col gap-3 bg-white rounded-tl-[40px] overflow-hidden ">
+      <div className=" lg:w-[calc(84%)] p-3  flex flex-col gap-3 bg-white rounded-tl-[40px] overflow-hidden ">
          <MenuT/>
          <div className = " w-full overflow-y-auto  ">
              {children}
