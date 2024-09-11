@@ -239,7 +239,8 @@ abbr:where([title]) {
   background: #e7e7e7!important;
 }
 .rbc-toolbar {
-  justify-content: space-between;
+  display: flex!important;
+  justify-content: space-between!important;
 }
 .rbc-toolbar  .rbc-toolbar-label {
   flex: none!important;
