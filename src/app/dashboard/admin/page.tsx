@@ -1,7 +1,15 @@
+"use client"
 import { Announcements, Attendance, Cards, Events, EventsCalendar, FinanceStats, StudentStats } from '@/components'
-import React from 'react'
+import React, { useState } from 'react'
 
 const AdminPage = () => {
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+
+  const handleDateChange = (date: Date | null) => {
+    setSelectedDate(date);
+    // You can perform additional actions with the selected date here
+    console.log('Selected Date:', date);
+  };
   return (
     <div className="w-full h-full flex gap-3 p-4
           max-sm:p-2
@@ -34,7 +42,7 @@ const AdminPage = () => {
             max-sm:w-full
       ">
         <div className='bg-white shadow-sm  border rounded-2xl overflow-hidden '>
-          <EventsCalendar />
+        <EventsCalendar onDateChange={handleDateChange} />
         </div>
         <div className='bg-white shadow-sm  border rounded-2xl overflow-hidden '>
           <Events />

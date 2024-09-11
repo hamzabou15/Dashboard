@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lama Dev School Management Dashboard",
+  title: "Dev School Management Dashboard",
   description: "Next.js School Management System",
 };
 
@@ -23,7 +23,7 @@ export default function DashboardLayout({
       {/* right section */}
       <div className=" lg:w-[calc(84%)] p-3  flex flex-col gap-3 bg-white rounded-tl-[40px] overflow-hidden ">
          <MenuT/>
-         <div className = " w-full overflow-y-auto  ">
+         <div className = " w-full overflow-y-auto min-h-[calc(100%-60px)]  ">
              {children}
          </div>
       </div>

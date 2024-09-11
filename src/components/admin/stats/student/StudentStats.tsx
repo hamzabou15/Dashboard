@@ -35,7 +35,7 @@ export const StudentStats = () => {
     return (
         <div className='flex flex-col '>
             <div className='flex items-center justify-between'>
-                <h2 className='text-[#311e63] text-base font-semibold'>Students</h2>
+                <h2 className='text-[#311e63] text-lg font-semibold'>Students</h2>
                 <div className='text-[#a7a7a7] text-2xl cursor-pointer'>
                     <MdMoreHoriz />
                 </div>

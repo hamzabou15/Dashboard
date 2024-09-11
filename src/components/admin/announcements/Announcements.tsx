@@ -24,21 +24,21 @@ export const Announcements = () => {
     return (
         <div className="bg-white p-4 rounded-md text-sm">
             <div className='flex items-center justify-between'>
-                <h2 className='text-[#311e63] text-base font-semibold'>Announcements</h2>
+                <h2 className='text-[#311e63] text-lg font-semibold'>Announcements</h2>
                 <div className='text-[#a7a7a7] text-base font-light cursor-pointer'>
-                    <span className='underline' >View all</span>
+                        <span className='font-normal text-sm' >View all</span>
                 </div>
             </div>
             {events.map((event, index) => (
                     <div
-                        className={`p-5 rounded-md border-0 border-gray-100 border-b-4 odd:border-t-lamaSky even:border-t-lamaPurple
+                        className={`p-5 rounded-md border-0 border-gray-100 border-b-4 odd:border-t-lamaSky even:border-t-lamaPurple rbc-event
                             ${index == events.length - 1 && 'border-b-0'}
                             `}
                         key={event.id}
                     >
                         <div className="flex items-center justify-between">
                             <h1 className="font-semibold text-gray-600">{event.title}</h1>
-                            <span className="text-[#6aa2bb] text-sm">{event.date}</span>
+                            <span className="text-[#000000] text-[12px] font-semibold">{event.date}</span>
                         </div>
                         <p className="mt-2 text-[#202124] text-sm">{event.description}</p>
                     </div>
