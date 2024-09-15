@@ -14,7 +14,7 @@ export const MenuD = () => {
   const windowWidth = useWindowWidth();
   return (
     <div className='flex flex-col h-full p-[8px 0px 8px 8px] pl-2 gap-4'>
-      <Link href="" className='flex items-center justify-center  gap-2 p-3 '>
+      <Link href="/" className='flex items-center justify-center  gap-2 p-3 '>
       <Image
             src={windowWidth < 1024 ? '/logoRespo.svg' : '/logo.svg'}
             alt="logo"

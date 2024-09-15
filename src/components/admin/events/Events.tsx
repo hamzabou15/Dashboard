@@ -35,14 +35,14 @@ export const Events = () => {
                 </div>
                 {events.map((event, index) => (
                     <div
-                        className={`p-5 rounded-md border-0 border-gray-100 border-b-4 odd:border-t-lamaSky even:border-t-lamaPurple
+                        className={`p-5 rounded-md border-0 border-b-4 odd:border-t-lamaSky even:border-t-lamaPurple rbc-container rbc-borders
                             ${index == events.length - 1 && 'border-b-0'}
                             `}
                         key={event.id}
                     >
                         <div className="flex items-center justify-between">
                             <h1 className="font-semibold text-gray-600">{event.title}</h1>
-                            <span className="text-[#6aa2bb] text-xs">{event.time}</span>
+                            <span className="text-[#000000]  font-semibold text-xs">{event.time}</span>
                         </div>
                         <p className="mt-2 text-[#202124] text-sm">{event.description}</p>
                     </div>

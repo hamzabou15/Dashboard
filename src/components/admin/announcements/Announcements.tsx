@@ -26,12 +26,12 @@ export const Announcements = () => {
             <div className='flex items-center justify-between'>
                 <h2 className='text-[#311e63] text-lg font-semibold'>Announcements</h2>
                 <div className='text-[#a7a7a7] text-base font-light cursor-pointer'>
-                        <span className='font-normal text-sm' >View all</span>
+                        <span className='font-normal text-sm hover:underline' >View all</span>
                 </div>
             </div>
             {events.map((event, index) => (
                     <div
-                        className={`p-5 rounded-md border-0 border-gray-100 border-b-4 odd:border-t-lamaSky even:border-t-lamaPurple rbc-event
+                        className={`p-5 rounded-md border-0 border-gray-100 border-b-4 odd:border-t-lamaSky even:border-t-lamaPurple rbc-borders
                             ${index == events.length - 1 && 'border-b-0'}
                             `}
                         key={event.id}

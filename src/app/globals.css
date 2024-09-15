@@ -249,3 +249,32 @@ abbr:where([title]) {
   padding: 0px!important;
   color: black!important;
 }
+
+
+
+
+.rbc-borders:nth-child(1) {
+  border-color: #c3ebfa!important;
+}
+.rbc-borders:nth-child(2) {
+  border-color: #ffca97!important;
+}
+.rbc-borders:nth-child(3) {
+  border-color: #f4acb7!important;
+}
+.rbc-borders:nth-child(4) {
+  border-color: #cdb4db!important;
+}
+.rbc-borders:nth-child(5) {
+  border-color: #c3ebfa!important;
+}
+.rbc-borders:nth-child(6) {
+  border-color: #ffca97 !important;
+}
+.rbc-borders:nth-child(7) {
+  border-color: #f4acb7!important;
+}
+.rbc-borders:nth-child(8) {
+  border-color: #cdb4db!important;
+}
+
