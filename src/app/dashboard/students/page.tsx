@@ -17,7 +17,6 @@ const StudentPage = () => {
     max-lg:flex-col-reverse"
     >
       <div className="w-[65%] h-full gap-3 flex flex-col 
-    max-md:w-[50%]
     max-lg:w-full
     sticky
     top-0
@@ -27,7 +26,6 @@ const StudentPage = () => {
         />
       </div>
       <div className="w-[35%] h-max flex flex-col  gap-4
-      max-md:w-[50%]
       max-lg:w-full
 ">
         <div className='bg-white shadow-sm border rounded-2xl overflow-hidden'>
