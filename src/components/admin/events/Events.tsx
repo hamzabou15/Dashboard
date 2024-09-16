@@ -27,7 +27,7 @@ export const Events = () => {
     return (
         <div className="bg-white p-4 rounded-md  text-sm   ">
             <div className="flex flex-col gap-4">
-                <div className='flex items-center justify-between'>
+                <div className='flex items-center justify-between mb-3'>
                     <h2 className='text-[#311e63] text-lg font-semibold'>Events</h2>
                     <div className='text-[#a7a7a7] text-2xl cursor-pointer'>
                         <MdMoreHoriz />

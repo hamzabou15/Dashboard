@@ -23,7 +23,7 @@ const events = [
 export const Announcements = () => {
     return (
         <div className="bg-white p-4 rounded-md text-sm">
-            <div className='flex items-center justify-between'>
+            <div className='flex items-center justify-between mb-3'>
                 <h2 className='text-[#311e63] text-lg font-semibold'>Announcements</h2>
                 <div className='text-[#a7a7a7] text-base font-light cursor-pointer'>
                         <span className='font-normal text-sm hover:underline' >View all</span>

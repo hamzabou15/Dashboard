@@ -7,7 +7,7 @@
 body {
   font-family: "Open Sans", sans-serif !important;
   color: #202124cf;
-  background-color: #330c4f;
+  background-color: #330c4f!important;
 }
 
 /* width */
@@ -46,11 +46,6 @@ input::placeholder {
   border-radius: 10px;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
-}
-
 /* cl */
 .react-calendar {
   border: none !important;
@@ -87,19 +82,24 @@ abbr:where([title]) {
   /* color: #00000000!important; */
 
 }
+
 .recharts-legend-item-text {
-  font-size: 14px!important;
+  font-size: 14px !important;
 }
+
 .recharts-surface {
   /* width : 14px!important; */
 }
+
 @media screen and (max-width: 768px) {
   .recharts-legend-item-text {
-    font-size: 12px!important;
+    font-size: 12px !important;
   }
+
   .recharts-surface {
-    width : 10px;
+    width: 10px;
   }
+
   .recharts-legend-wrapper {
     padding: 10px 0px 20px 0px;
   }
@@ -139,15 +139,16 @@ abbr:where([title]) {
   background-color: #f1f0ff !important;
   margin-left: 2px !important;
 }
+
 .rbc-toolbar .rbc-btn-group {
-  font-size: 13px!important;
-  font-weight: 500!important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
 }
 
 .rbc-toolbar button.rbc-active {
   background-color: #dbdafe !important;
   box-shadow: none !important;
-  font-weight: 600!important;
+  font-weight: 600 !important;
 }
 
 .rbc-time-view {
@@ -171,7 +172,7 @@ abbr:where([title]) {
 }
 
 .rbc-day-slot {
-  background-color: #fff8ff  !important;
+  background-color: #fff8ff !important;
 }
 
 .rbc-day-slot {
@@ -187,94 +188,120 @@ abbr:where([title]) {
 }
 
 .rbc-event:nth-child(1) {
-  background-color: #c3ebfa!important;
+  background-color: #c3ebfa !important;
 }
+
 .rbc-event:nth-child(2) {
-  background-color: #ffca97!important;
+  background-color: #ffca97 !important;
 }
+
 .rbc-event:nth-child(3) {
-  background-color: #f4acb7!important;
+  background-color: #f4acb7 !important;
 }
+
 .rbc-event:nth-child(4) {
-  background-color: #cdb4db!important;
+  background-color: #cdb4db !important;
 }
+
 .rbc-event:nth-child(5) {
-  background-color: #c3ebfa!important;
+  background-color: #c3ebfa !important;
 }
+
 .rbc-event:nth-child(6) {
   background-color: #ffca97 !important;
 }
+
 .rbc-event:nth-child(7) {
-  background-color: #f4acb7!important;
-}
-.rbc-event:nth-child(8) {
-  background-color: #cdb4db!important;
+  background-color: #f4acb7 !important;
 }
 
-.rbc-event-label{
+.rbc-event:nth-child(8) {
+  background-color: #cdb4db !important;
+}
+
+.rbc-event-label {
   color: gray !important;
   margin-bottom: 5px;
 }
-.rbc-event{
+
+.rbc-event {
   display: block !important;
-  margin: 11px 5px!important;
+  margin: 11px 5px !important;
 }
+
 .rbc-timeslot-group {
-  min-height: 90px!important;
+  min-height: 90px !important;
 }
+
 .rbc-event-content {
-  font-weight: 600!important;
-  margin-top: 9px!important;
+  font-weight: 600 !important;
+  margin-top: 9px !important;
 }
+
 .rbc-time-content {
-  padding: 10px!important;
+  padding: 10px !important;
   border-radius: 1rem;
 
 }
+
 .rbc-time-view {
   border-radius: 1rem;
 
 }
+
 .rbc-today {
-  background: #e7e7e7!important;
+  background: #e7e7e7 !important;
 }
+
 .rbc-toolbar {
-  display: flex!important;
-  justify-content: space-between!important;
+  display: flex !important;
+  justify-content: space-between !important;
 }
-.rbc-toolbar  .rbc-toolbar-label {
-  flex: none!important;
-  font-weight: 600!important;
-  font-size: 16px!important;
-  padding: 0px!important;
-  color: black!important;
+
+.rbc-toolbar .rbc-toolbar-label {
+  flex: none !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  padding: 0px !important;
+  color: black !important;
 }
 
 
 
 
 .rbc-borders:nth-child(1) {
-  border-color: #c3ebfa!important;
+  border-color: #c3ebfa !important;
 }
+
 .rbc-borders:nth-child(2) {
-  border-color: #ffca97!important;
+  border-color: #ffca97 !important;
 }
+
 .rbc-borders:nth-child(3) {
-  border-color: #f4acb7!important;
+  border-color: #f4acb7 !important;
 }
+
 .rbc-borders:nth-child(4) {
-  border-color: #cdb4db!important;
+  border-color: #cdb4db !important;
 }
+
 .rbc-borders:nth-child(5) {
-  border-color: #c3ebfa!important;
+  border-color: #c3ebfa !important;
 }
+
 .rbc-borders:nth-child(6) {
   border-color: #ffca97 !important;
 }
+
 .rbc-borders:nth-child(7) {
-  border-color: #f4acb7!important;
-}
-.rbc-borders:nth-child(8) {
-  border-color: #cdb4db!important;
+  border-color: #f4acb7 !important;
 }
 
+.rbc-borders:nth-child(8) {
+  border-color: #cdb4db !important;
+}
+
+
+.rowSelected {
+  background-color: var(--mantine-color-blue-light);
+}
