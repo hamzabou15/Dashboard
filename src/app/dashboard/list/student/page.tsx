@@ -1,5 +1,5 @@
 "use client"
-import { TableSearch, TeacherForm } from '@/components'
+import { StudentForm, TableSearch, TeacherForm } from '@/components'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -12,7 +12,7 @@ const Page = () => {
     return (
         <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0 border-t-[1px] border-gray-100">
             {/* TOP */}
-            <TeacherForm />
+            <StudentForm />
             {/* LIST */}
             {/* <Table columns={columns} renderRow={renderRow} data={teachersData} /> */}
             {/* PAGINATION */}

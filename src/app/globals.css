@@ -305,3 +305,14 @@ abbr:where([title]) {
 .rowSelected {
   background-color: var(--mantine-color-blue-light);
 }
+
+/* mntine */
+
+.mantine-Input-wrapper input {
+
+    border:1px solid #330c4f3b;
+}
+
+.mantine-Input-wrapper input:focus {
+  border:2px solid #330c4f3b;
+}

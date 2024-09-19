@@ -1,6 +1,7 @@
 "use client"
 import { teachersData } from "@/lib/lists/teachersData";
 import { ListComponent } from "../ListComponent";
+import { studentsData } from "@/lib/lists/studentsData";
 
 interface Teacher {
     id: number;
@@ -28,10 +29,11 @@ const teacherColumns: Column<Teacher>[] = [
     { key: 'phone', label: 'Phone' },
 ];
 
-export const TeacherForm = () => {
+export const StudentForm = () => {
     return (
         <div>
-            <ListComponent data={teachersData} columns={teacherColumns}  Title="All Teachers"/>
+            ss
+            {/* <ListComponent data={studentsData} columns={teacherColumns}  Title="All Teachers"/> */}
         </div>
     )
 }

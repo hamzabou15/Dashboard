@@ -23,6 +23,7 @@ interface Column<T> {
 interface DataTableProps<T> {
     data: T[];
     columns: Column<T>[];
+    Title:string;
 }
 
 interface ThProps {
@@ -92,7 +93,7 @@ function sortData<T>(
     return filterData(sorted, payload.search, columns);
 }
 
-export function ListComponent<T>({ data, columns }: DataTableProps<T>) {
+export function ListComponent<T>({ data, columns , Title }: DataTableProps<T>) {
     const [search, setSearch] = useState('');
     const [sortedData, setSortedData] = useState(data);
     const [sortBy, setSortBy] = useState<keyof T | null>(null);
@@ -135,7 +136,10 @@ export function ListComponent<T>({ data, columns }: DataTableProps<T>) {
 
     return (
         <ScrollArea>
-            <div className='w-full flex justify-end'>
+            <div className='w-full flex justify-between items-center mb-8 top-0 sticky left-0'>
+                <div className="flex items-center justify-between">
+                    <h1 className="hidden md:block text-lg font-semibold">{Title}</h1>
+                </div>
                 <TextInput
                     placeholder="Search by any field"
                     mb="md"
@@ -145,7 +149,6 @@ export function ListComponent<T>({ data, columns }: DataTableProps<T>) {
                     className=' w-[max-content]'
                 />
             </div>
-
             <Table horizontalSpacing="md" verticalSpacing="xs" miw={700} layout="fixed">
                 <Table.Thead>
                     <Table.Tr>
@@ -216,6 +219,7 @@ export function ListComponent<T>({ data, columns }: DataTableProps<T>) {
                     onChange={setPage}
                     total={Math.ceil(sortedData.length / rowsPerPage)}
                     mt="md"
+                    color='#330c4f'
                 />
             </div>
 
