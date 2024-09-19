@@ -163,7 +163,7 @@ export function ListComponent<T>({ data, columns }: DataTableProps<T>) {
                 </Table.Thead>
                 <Table.Tbody>
                     {paginatedData.length > 0 ? (
-                        paginatedData.map((row :any) => (
+                        paginatedData.map((row: any) => (
                             <Table.Tr key={row.id}>
                                 <Table.Td className='flex items-center gap-2'>
                                     <img
@@ -210,12 +210,15 @@ export function ListComponent<T>({ data, columns }: DataTableProps<T>) {
             </Table>
 
             {/* Pagination */}
-            <Pagination
-                value={activePage}
-                onChange={setPage}
-                total={Math.ceil(sortedData.length / rowsPerPage)}
-                mt="md"
-            />
+            <div className='w-full flex justify-center items-center my-6'>
+                <Pagination
+                    value={activePage}
+                    onChange={setPage}
+                    total={Math.ceil(sortedData.length / rowsPerPage)}
+                    mt="md"
+                />
+            </div>
+
         </ScrollArea>
     );
 }
