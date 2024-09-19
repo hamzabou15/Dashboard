@@ -17,9 +17,19 @@ export const MenuT = () => {
                 </h1>
             </div>
             <div className='max-sm:w-[50%]'>
-                <div className='flex items-center gap-3 border border-[#20212414] border-w-[3px] rounded-full p-1 px-2 '>
-                    <CiSearch />
-                    <input type="text" placeholder="Search..." className="border-none bg-transparent " />
+                <div className='flex items-center relative gap-3 w-[250px] bg-transparent  text-[#6e6d7a] h-[45px] rounded-full p-2 px-3 border-transparent border-[2px]
+                                '>
+                    <CiSearch
+                        className='text-[#6e6d7a] z-10 relative'
+                    />
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        className="absolute top-0 left-0 mt-[-2px] h-full bg-[#f4f5fb]  w-full pl-9 border-transparent border-[2px]  rounded-full
+                                 focus:border-[#330c4f3b] focus:bg-transparent
+                                 hover:border-[#330c4f23] hover:bg-transparent
+                                 "
+                    />
                 </div>
             </div>
             <div className='max-sm:w-[50%]'>
@@ -29,12 +39,12 @@ export const MenuT = () => {
                 >
                     <div className="cursor-pointer
                                     max-sm:hidden"
-                     >
+                    >
                         <AiOutlineMessage />
                     </div>
                     <div className="relative cursor-pointer
                                     max-sm:hidden"
-                     >
+                    >
                         <IoMegaphoneOutline />
                         <div className="absolute w-5 h-5 rounded-full bg-[#311e63] flex items-center justify-center top-[-16px] right-[-16px]">
                             <span className="text-white text-[8px]"> 3</span>
