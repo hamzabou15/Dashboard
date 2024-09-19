@@ -33,7 +33,7 @@ interface ThProps {
 }
 
 function Th({ children, reversed, sorted, onSort }: ThProps) {
-    const Icon = sorted ? (reversed ? IoChevronUp : IoChevronDown) : HiOutlineSelector; 
+    const Icon = sorted ? (reversed ? IoChevronUp : IoChevronDown) : HiOutlineSelector;
     return (
         <Table.Th>
             <UnstyledButton onClick={onSort}>
@@ -162,8 +162,41 @@ export function ListComponent<T>({ data, columns }: DataTableProps<T>) {
                     </Table.Tr>
                 </Table.Thead>
                 <Table.Tbody>
-                    {rows.length > 0 ? (
-                        rows
+                    {paginatedData.length > 0 ? (
+                        paginatedData.map((row :any) => (
+                            <Table.Tr key={row.id}>
+                                <Table.Td className='flex items-center gap-2'>
+                                    <img
+                                        src={row.avatar}
+                                        alt={`${row.name}'s avatar`}
+                                        className='object-cover'
+                                        style={{ width: '40px', height: '40px', borderRadius: '50%' }}
+                                    />
+                                    <div className='flex flex-col gap-0'>
+                                        <span className='text-base font-semibold'>{row.name}</span>
+                                        <span className='text-base text-slate-400'>{row.email}</span>
+                                    </div>
+                                </Table.Td>
+                                <Table.Td>
+                                    <span className='text-base'>{row.id}</span>
+                                </Table.Td>
+                                <Table.Td>
+                                    <span className='text-base'>{row.subjects.join(', ')}</span>
+                                </Table.Td>
+                                <Table.Td>
+                                    <span className='text-base'>{row.classes.join(', ')}</span>
+                                </Table.Td>
+                                <Table.Td>
+                                    <span className='text-base'>{row.email}</span>
+                                </Table.Td>
+                                <Table.Td>
+                                    <span className='text-base'>{row.address}</span>
+                                </Table.Td>
+                                <Table.Td>
+                                    <span className='text-base'>{row.phone}</span>
+                                </Table.Td>
+                            </Table.Tr>
+                        ))
                     ) : (
                         <Table.Tr>
                             <Table.Td colSpan={columns.length}>
