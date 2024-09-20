@@ -23,7 +23,7 @@ interface Column<T> {
 interface DataTableProps<T> {
     data: T[];
     columns: Column<T>[];
-    Title:string;
+    Title: string;
 }
 
 interface ThProps {
@@ -93,7 +93,7 @@ function sortData<T>(
     return filterData(sorted, payload.search, columns);
 }
 
-export function ListComponent<T>({ data, columns , Title }: DataTableProps<T>) {
+export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
     const [search, setSearch] = useState('');
     const [sortedData, setSortedData] = useState(data);
     const [sortBy, setSortBy] = useState<keyof T | null>(null);
@@ -169,12 +169,13 @@ export function ListComponent<T>({ data, columns , Title }: DataTableProps<T>) {
                         paginatedData.map((row: any) => (
                             <Table.Tr key={row.id}>
                                 <Table.Td className='flex items-center gap-2'>
+                                  { row.avatar  &&
                                     <img
                                         src={row.avatar}
                                         alt={`${row.name}'s avatar`}
                                         className='object-cover'
                                         style={{ width: '40px', height: '40px', borderRadius: '50%' }}
-                                    />
+                                    />}
                                     <div className='flex flex-col gap-0'>
                                         <span className='text-base font-semibold'>{row.name}</span>
                                         <span className='text-base text-slate-400'>{row.email}</span>
@@ -183,12 +184,29 @@ export function ListComponent<T>({ data, columns , Title }: DataTableProps<T>) {
                                 <Table.Td>
                                     <span className='text-base'>{row.id}</span>
                                 </Table.Td>
-                                <Table.Td>
-                                    <span className='text-base'>{row.subjects.join(', ')}</span>
-                                </Table.Td>
-                                <Table.Td>
-                                    <span className='text-base'>{row.classes.join(', ')}</span>
-                                </Table.Td>
+                                {row.students &&
+                                    <Table.Td>
+                                        <span className='text-base'>{row.students.join(', ')}</span>
+                                    </Table.Td>
+                                }
+                                {row.subjects &&
+                                    <Table.Td>
+                                        <span className='text-base'>{row.subjects.join(', ')}</span>
+                                    </Table.Td>
+                                }
+                                {row.classes &&
+                                    <Table.Td>
+                                        <span className='text-base'>{row.classes.join(', ')}</span>
+                                    </Table.Td>}
+                                {row.grade &&
+                                    <Table.Td>
+                                        <span className='text-base'>{row.grade}</span>
+                                    </Table.Td>
+                                }
+                                {row.class &&
+                                    <Table.Td>
+                                        <span className='text-base'>{row.class}</span>
+                                    </Table.Td>}
                                 <Table.Td>
                                     <span className='text-base'>{row.email}</span>
                                 </Table.Td>

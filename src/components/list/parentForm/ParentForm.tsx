@@ -1,17 +1,14 @@
 "use client"
 import { teachersData } from "@/lib/lists/teachersData";
 import { ListComponent } from "../ListComponent";
-import { studentsData } from "@/lib/lists/studentsData";
+import { parentsData } from "@/lib/lists/parentsData";
 
-interface Student {
+interface Parent {
     id: number;
-    studentId: string;
-    name: string;
+    name:string;
+    students: string[];
     email: string;
-    avatar: string;
     phone: string;
-    grade: number;
-    class: string;
     address: string;
 }
 interface Column<T> {
@@ -19,20 +16,19 @@ interface Column<T> {
     label: string; // The label is a string displayed in the header
 }
 
-const studentColumns: Column<Student>[] = [
+const parentColumns: Column<Parent>[] = [
     { key: 'name', label: 'Name' },
     { key: 'id', label: 'ID' },
-    { key: 'grade', label: 'Grade' },
-    { key: 'class', label: 'Class' },
+    { key: 'students', label: 'Students' },
     { key: 'email', label: 'Email' },
     { key: 'address', label: 'Address' },
     { key: 'phone', label: 'Phone' },
 ];
 
-export const StudentForm = () => {
+export const ParentForm = () => {
     return (
         <div>
-            <ListComponent data={studentsData} columns={studentColumns}  Title="All Teachers"/>
+            <ListComponent data={parentsData} columns={parentColumns}  Title="All Parents"/>
         </div>
     )
 }
