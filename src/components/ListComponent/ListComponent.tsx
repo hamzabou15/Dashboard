@@ -31,12 +31,14 @@ interface ThProps {
   reversed: boolean;
   sorted: boolean;
   onSort(): void;
+  style?: React.CSSProperties; // Ajout de la propriété style
+
 }
 
-function Th({ children, reversed, sorted, onSort }: ThProps) {
+function Th({ children, reversed, sorted, onSort, style }: ThProps) {
   const Icon = sorted ? (reversed ? IoChevronUp : IoChevronDown) : HiOutlineSelector;
   return (
-    <Table.Th>
+    <Table.Th style={style}> 
       <UnstyledButton onClick={onSort}>
         <Group justify="space-between">
           <Text fw={500} fz="sm">
@@ -50,6 +52,7 @@ function Th({ children, reversed, sorted, onSort }: ThProps) {
     </Table.Th>
   );
 }
+
 
 export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
   const [search, setSearch] = useState("");
@@ -129,12 +132,14 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
                 sorted={sortBy === column.key}
                 reversed={reverseSortDirection}
                 onSort={() => setSorting(column.key)}
+                style={column.key === "ID" ? { width: '40px' } : undefined} // Condition correcte pour appliquer le style
               >
                 {column.label}
               </Th>
             ))}
           </Table.Tr>
         </Table.Thead>
+
         <Table.Tbody>
           {paginatedData?.length > 0 ? (
             paginatedData.map((row: any) => (
@@ -152,7 +157,8 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
                     <div className="flex flex-col gap-0">
                       <span className="text-base font-semibold">{row.name}</span>
                       {row.email && (
-                        <span className="text-base text-slate-400">{row.email}</span>
+                        <span className="text-base text-slate-400
+                        ">{row.email}</span>
                       )}
                     </div>
                   </Table.Td>
@@ -177,8 +183,8 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
                     <span className="text-base">{row.subjectName}</span>
                   </Table.Td>
                 )}
-                <Table.Td>
-                  <span className="text-base">{row.id}</span>
+                <Table.Td >
+                  <span className="text-base" >{row.id}</span>
                 </Table.Td>
                 {row.capacity && (
                   <Table.Td>
