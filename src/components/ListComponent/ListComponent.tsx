@@ -89,7 +89,7 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
   };
 
   // Paginate the sorted data
-  const paginatedData = sortedData.slice(
+  const paginatedData = sortedData?.slice(
     (activePage - 1) * rowsPerPage,
     activePage * rowsPerPage
   );
@@ -136,7 +136,7 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>
-          {paginatedData.length > 0 ? (
+          {paginatedData?.length > 0 ? (
             paginatedData.map((row: any) => (
               <Table.Tr key={row.id}>
                 {row.name && (
@@ -160,6 +160,11 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
                 {row.classeName && (
                   <Table.Td>
                     <span className="text-base">{row.classeName}</span>
+                  </Table.Td>
+                )}
+                {row.subjectName && (
+                  <Table.Td>
+                    <span className="text-base">{row.subjectName}</span>
                   </Table.Td>
                 )}
                 <Table.Td>
@@ -228,6 +233,11 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
                 {row.date && (
                   <Table.Td>
                     <span className="text-base">{row.date}</span>
+                  </Table.Td>
+                )}
+                {row.dueDate && (
+                  <Table.Td>
+                    <span className="text-base">{row.dueDate}</span>
                   </Table.Td>
                 )}
               </Table.Tr>

@@ -1,0 +1,73 @@
+export const assignmentsData = [
+    {
+      id: 1,
+      subjectName: "Math",
+      class: "1A",
+      teacher: "Anthony Boone",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 2,
+      subjectName: "English",
+      class: "2A",
+      teacher: "Clifford Bowen",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 3,
+      subjectName: "Science",
+      class: "3A",
+      teacher: "Catherine Malone",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 4,
+      subjectName: "Social Studies",
+      class: "1B",
+      teacher: "Willie Medina",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 5,
+      subjectName: "Art",
+      class: "4A",
+      teacher: "Jose Ruiz",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 6,
+      subjectName: "Music",
+      class: "5A",
+      teacher: "Katharine Owens",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 7,
+      subjectName: "History",
+      class: "6A",
+      teacher: "Shawn Norman",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 8,
+      subjectName: "Geography",
+      class: "6B",
+      teacher: "Don Holloway",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 9,
+      subjectName: "Physics",
+      class: "7A",
+      teacher: "Franklin Gregory",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 10,
+      subjectName: "Chemistry",
+      class: "8A",
+      teacher: "Danny Nguyen",
+      dueDate: "2025-01-01",
+    },
+  ];
+  
