@@ -6,6 +6,11 @@ export * from './parentForm'
 export * from './subjectForm'
 export * from './lessonForm'
 export * from './examForm'
+export * from './resultForm'
+export * from './resultForm'
+export * from './eventForm'
+
+
 
 
 

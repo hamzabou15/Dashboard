@@ -103,14 +103,14 @@ export const menuItems: { items: MenuItem[] }[] = [
         href: "/list/results",
         visible: ["admin", "teacher", "student", "parent"],
       },
-      {
-        icon: "/attendance.png",
-        label: "Attendance",
-        iconOutlined: BsPersonCheck,
-        iconSolid: BsPersonFillCheck,
-        href: "/list/attendance",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
+      // {
+      //   icon: "/attendance.png",
+      //   label: "Attendance",
+      //   iconOutlined: BsPersonCheck,
+      //   iconSolid: BsPersonFillCheck,
+      //   href: "/list/attendance",
+      //   visible: ["admin", "teacher", "student", "parent"],
+      // },
       {
         icon: "/calendar.png",
         label: "Events",

@@ -157,6 +157,16 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
                     </div>
                   </Table.Td>
                 )}
+                {row.student && (
+                  <Table.Td>
+                    <span className="text-base font-medium ">{row.student}</span>
+                  </Table.Td>
+                )}
+                {row.title && (
+                  <Table.Td>
+                    <span className="text-base font-medium">{row.title}</span>
+                  </Table.Td>
+                )}
                 {row.classeName && (
                   <Table.Td>
                     <span className="text-base">{row.classeName}</span>
@@ -200,6 +210,11 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
                     <span className="text-base">{row.grade}</span>
                   </Table.Td>
                 )}
+                {row.CoursSubject && (
+                  <Table.Td>
+                    <span className="text-base">{row.CoursSubject}</span>
+                  </Table.Td>
+                )}
                 {row.class && (
                   <Table.Td>
                     <span className="text-base">{row.class}</span>
@@ -232,12 +247,32 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
                 )}
                 {row.date && (
                   <Table.Td>
-                    <span className="text-base">{row.date}</span>
+                    <span className="text-base font-medium">{row.date}</span>
                   </Table.Td>
                 )}
                 {row.dueDate && (
                   <Table.Td>
                     <span className="text-base">{row.dueDate}</span>
+                  </Table.Td>
+                )}
+                {row.startTime && (
+                  <Table.Td>
+                    <span className="text-base">{row.startTime}</span>
+                  </Table.Td>
+                )}
+                {row.endTime && (
+                  <Table.Td>
+                    <span className="text-base">{row.endTime}</span>
+                  </Table.Td>
+                )}
+                {row.type && (
+                  <Table.Td>
+                    <span className="text-base">{row.type}</span>
+                  </Table.Td>
+                )}
+                {row.score && (
+                  <Table.Td>
+                    <span className="text-base">{row.score}</span>
                   </Table.Td>
                 )}
               </Table.Tr>
