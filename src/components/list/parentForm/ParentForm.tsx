@@ -1,6 +1,6 @@
 "use client"
 import { teachersData } from "@/lib/lists/teachersData";
-import { ListComponent } from "../ListComponent";
+import { ListComponent } from "../../ListComponent";
 import { parentsData } from "@/lib/lists/parentsData";
 
 interface Parent {

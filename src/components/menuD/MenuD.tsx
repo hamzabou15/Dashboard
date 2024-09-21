@@ -44,7 +44,7 @@ export const MenuD = () => {
                       ? React.createElement(item.iconSolid)
                       : React.createElement(item.iconOutlined)}
                   </div>
-                  <span className='hidden lg:block truncate max-w-[70%] relative z-10'>{item.label}</span>
+                  <span className='hidden lg:block truncate max-w-[70%] font-medium relative z-10'>{item.label}</span>
                 </Link>
               );
             })}
