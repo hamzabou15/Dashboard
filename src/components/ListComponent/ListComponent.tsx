@@ -139,7 +139,6 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
             ))}
           </Table.Tr>
         </Table.Thead>
-
         <Table.Tbody>
           {paginatedData?.length > 0 ? (
             paginatedData.map((row: any) => (
