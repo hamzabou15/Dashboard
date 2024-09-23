@@ -112,7 +112,7 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
     <ScrollArea>
       <div className="w-full flex justify-between items-center mb-8 top-0 sticky left-0">
         <div className="flex items-center justify-between">
-          <h1 className="hidden md:block text-lg font-semibold">{Title}</h1>
+          <h1 className="md:block text-lg font-semibold">{Title}</h1>
         </div>
         <TextInput
           placeholder="Search by any field"
@@ -123,7 +123,7 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
           className="w-[max-content]"
         />
       </div>
-      <Table horizontalSpacing="xs" verticalSpacing="xs" miw={900}  type="native" >
+      <Table horizontalSpacing="xs" verticalSpacing="xs" miw={900}   >
         <Table.Thead>
           <Table.Tr >
             {columns.map((column) => (

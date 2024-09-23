@@ -20,7 +20,8 @@ export const MenuT = () => {
                 <div className='flex items-center relative gap-3 w-[250px] bg-transparent  text-[#6e6d7a] h-[45px] rounded-full p-2 px-3 border-transparent border-[2px]
                                 '>
                     <CiSearch
-                        className='text-[#6e6d7a] z-10 relative'
+                        className='text-[#6e6d7a] z-10 relative 
+                        max-sm:text-2xl'
                     />
                     <input
                         type="text"
@@ -28,6 +29,7 @@ export const MenuT = () => {
                         className="absolute top-0 left-0 mt-[-2px] h-full bg-[#f4f5fb]  w-full pl-9 border-transparent border-[2px]  rounded-full
                                  focus:border-[#330c4f3b] focus:bg-transparent
                                  hover:border-[#330c4f23] hover:bg-transparent
+                                 max-sm:hidden
                                  "
                     />
                 </div>
