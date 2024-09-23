@@ -123,11 +123,12 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
           className="w-[max-content]"
         />
       </div>
-      <Table horizontalSpacing="md" verticalSpacing="xs" miw={700} layout="fixed">
+      <Table horizontalSpacing="xs" verticalSpacing="xs" miw={900}  type="native" >
         <Table.Thead>
-          <Table.Tr>
+          <Table.Tr >
             {columns.map((column) => (
               <Th
+                
                 key={column.key as string}
                 sorted={sortBy === column.key}
                 reversed={reverseSortDirection}
@@ -142,21 +143,21 @@ export function ListComponent<T>({ data, columns, Title }: DataTableProps<T>) {
         <Table.Tbody>
           {paginatedData?.length > 0 ? (
             paginatedData.map((row: any) => (
-              <Table.Tr key={row.id}>
+              <Table.Tr key={row.id} mb="xs">
                 {row.name && (
                   <Table.Td className="flex items-center gap-2">
                     {row.avatar && (
                       <img
                         src={row.avatar}
                         alt={`${row.name}'s avatar`}
-                        className="object-cover"
+                        className="object-cover max-sm:hidden"
                         style={{ width: "40px", height: "40px", borderRadius: "50%" }}
                       />
                     )}
                     <div className="flex flex-col gap-0">
                       <span className="text-base font-semibold">{row.name}</span>
                       {row.email && (
-                        <span className="text-base text-slate-400
+                        <span className="text-base text-slate-400 w-[100%] truncate
                         ">{row.email}</span>
                       )}
                     </div>
