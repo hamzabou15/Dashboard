@@ -15,9 +15,6 @@ body {
   display: none;
 }
 
-input {
-  /* border: none !important */
-}
 
 input:focus {
   outline: none !important;
