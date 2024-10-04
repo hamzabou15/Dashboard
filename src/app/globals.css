@@ -45,11 +45,9 @@ input:focus {
   border: none !important;
   width: 100% !important
 }
-
 .react-calendar__month-view__days__day--weekend {
   color: rgb(251, 139, 36) !important;
 }
-
 abbr:where([title]) {
   text-decoration: none !important;
 }
@@ -57,7 +55,6 @@ abbr:where([title]) {
 .react-calendar__navigation {
   margin-bottom: 0px !important;
 }
-
 .react-calendar__tile--now {
   background: #330c4f46 !important;
   color: white !important;
