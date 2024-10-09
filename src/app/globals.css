@@ -76,10 +76,6 @@ abbr:where([title]) {
   font-size: 14px !important;
 }
 
-.recharts-surface {
-  /* width : 14px!important; */
-}
-
 @media screen and (max-width: 768px) {
   .recharts-legend-item-text {
     font-size: 12px !important;
