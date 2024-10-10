@@ -328,9 +328,6 @@ export const calendarEvents = [
   { title: "Chemistry", allDay: false, start: new Date(2024, 11, 24, 9, 0), end: new Date(2024, 11, 24, 9, 45) },
   { title: "English", allDay: false, start: new Date(2024, 11, 24, 10, 0), end: new Date(2024, 11, 24, 10, 45) },
 
-  // Cours du 25 décembre 2024 (Mercredi)
-  // Pas de cours (jour férié)
-
   // Cours du 26 décembre 2024 (Jeudi)
   { title: "Physics", allDay: false, start: new Date(2024, 11, 26, 9, 0), end: new Date(2024, 11, 26, 9, 45) },
 
